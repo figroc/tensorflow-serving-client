@@ -102,5 +102,5 @@ task __sources__(type: Delete) {
   dependsOn "__golang__"
   dependsOn "__csharp__"
   dependsOn "__rust__"
-  delete ".travis.yml", "build.sh", "update.sh", "Dockerfile", "gradle"
+  delete ".github", "build.sh", "update.sh", "Dockerfile", "gradle"
 }
