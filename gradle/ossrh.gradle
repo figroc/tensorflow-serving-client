@@ -1,12 +1,12 @@
 apply plugin: "maven-publish"
 
 task sourcesJar(type: Jar) {
-  classifier "sources"
+  archiveClassifier = "sources"
   from sourceSets.generated.java
 }
 
 task javadocJar(type: Jar) {
-  classifier "javadoc"
+  archiveClassifier = "javadoc"
   from javadoc
 }
 

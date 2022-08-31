@@ -6,7 +6,7 @@
   "name": "${TFSCLIENT_NAME}",
   "version": "${TFSCLIENT_VERSION}",
   "dependencies": {
-    "@grpc/proto-loader": "^0.5.6",
+    "@grpc/proto-loader": "^0.7.13",
     "@grpc/grpc-js": "^${TFSCLIENT_VERSION_GRPC_NODE}",
     "protobufjs": "^${TFSCLIENT_VERSION_PROTO_NODE}"
   },
