@@ -10,3 +10,7 @@ dist/
 go.sum
 package-lock.json
 Cargo.lock
+
+venv/
+python/
+
