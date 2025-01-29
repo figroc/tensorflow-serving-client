@@ -40,6 +40,7 @@ function importProto {( set -e
     done
   fi
 )}
-for i in ${repo}/${apis}/*.proto; do
+for i in ${repo}/${apis}/*_service.proto; do
   importProto ${i#${repo}/}
 done
+importProto ${apis}/prediction_log.proto
