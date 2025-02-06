@@ -4,5 +4,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker pull figroc/tfsclient:build
-      - run: ./build.sh buildAll
+      - run: ./gradle.sh buildAll

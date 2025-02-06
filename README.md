@@ -4,7 +4,7 @@
 
 A prebuilt tensorflow serving client from the tensorflow serving proto files.
 
-Currently supported build: *C++, Java, Python, Node, Go, Mono, Rust*.
+Currently supported build: *C++, Python, Java, Node, Mono, Rust, Go*.
 
 Check tensorflow serving project for details: https://tensorflow.github.io/serving/
 
@@ -25,30 +25,20 @@ Grpc tools are needed for building variant packages.
 
 See `Dockerfile` for details.
 
-*NOTE: grpc@1.35 and protobuf@3.14 are required*
-
 Target | Command         | Outputs     | Artifacts
 -------|-----------------|-------------|----------------------------------------
 native | `gradle cmake`  | build/cmake | [![Publish Status](https://img.shields.io/spack/v/tensorflow-serving-client)](https://github.com/spack/spack/tree/develop/var/spack/repos/builtin/packages/tensorflow-serving-client)
-java   | `gradle java`   | build/libs  | [![Publish Status](https://img.shields.io/maven-central/v/io.opil/tensorflow-serving-client)](https://search.maven.org/search?q=g:io.opil%20AND%20a:tensorflow-serving-client)
 python | `gradle wheel`  | build/dist  | [![Publish Status](https://img.shields.io/pypi/v/tensorflow-serving-client-grpc)](https://pypi.org/project/tensorflow-serving-client-grpc)
+java   | `gradle java`   | build/libs  | [![Publish Status](https://img.shields.io/maven-central/v/io.opil/tensorflow-serving-client)](https://search.maven.org/search?q=g:io.opil%20AND%20a:tensorflow-serving-client)
 node   | `gradle node`   | build/node  | [![Publish Status](https://img.shields.io/npm/v/tensorflow-serving-client)](https://www.npmjs.com/package/tensorflow-serving-client)
-go     | `gradle golang` | build/go    | [![Publish Status](https://img.shields.io/github/v/tag/figroc/tensorflow-serving-client?label=go&sort=semver)](https://github.com/figroc/tensorflow-serving-client)
 mono   | `gradle mono`   | build/mono  | [![Publish Status](https://img.shields.io/nuget/v/tensorflow-serving-client)](https://www.nuget.org/packages/tensorflow-serving-client)
 rust   | `gradle rust`   | build/cargo | [![Publish Status](https://img.shields.io/crates/v/tensorflow-serving-client)](https://crates.io/crates/tensorflow-serving-client)
+go     | `gradle golang` | build/go    | [![Publish Status](https://img.shields.io/github/v/tag/figroc/tensorflow-serving-client?label=go&sort=semver)](https://github.com/figroc/tensorflow-serving-client)
 
 ## using docker
 
-Invoke `./build.sh` instead of `gradle` to build artifacts using the docker.
-
-The building container runs as user `gradle` whose UID:GID is 1000:1000.
-It goes well given that the UID:GID pair of the user matches the one in the host OS.
-
-Otherwise you have to configure it manually. There are two approaches you can take either:
-
-1. Create a new user in the host OS to match the UID:GID pair of `gradle`.
-2. Make the dirs `.gradle`, `build` and `obj` in the project root to be world-writable.
+Invoke `./gradle.sh` instead of `gradle` to build artifacts using the docker.
 
 ## known issues
 
-* protobuf 3.12.3 is buggy (protocolbuffers/protobuf#7683)
+* *Java, Node, Mono, Rust, Go* are excluded from `./gradle.sh buildAll`

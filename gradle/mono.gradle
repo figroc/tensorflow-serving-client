@@ -10,10 +10,6 @@ task mono {
   doLast {
     exec {
       environment buildEnviron(distEnv)
-      commandLine "donet", "restore", "mono.csproj"
-    }
-    exec {
-      environment buildEnviron(distEnv)
       commandLine "dotnet", "build", "-t:build;pack", "mono.csproj"
     }
   }
