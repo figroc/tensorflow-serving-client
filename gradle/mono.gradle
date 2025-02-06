@@ -10,10 +10,6 @@ task mono {
   doLast {
     exec {
       environment buildEnviron(distEnv)
-      commandLine "nuget", "restore", "mono.csproj"
-    }
-    exec {
-      environment buildEnviron(distEnv)
       commandLine "dotnet", "build", "-t:build;pack", "mono.csproj"
     }
   }
@@ -23,7 +19,7 @@ task nuget(type: Exec) {
   dependsOn "mono"
   inputs.dir mono.distEnv.output
   environment buildEnviron(mono.distEnv)
-  commandLine "nuget", "push", "${mono.distEnv.output}/${mono.distEnv.build}/${project.name}.${project.version}.nupkg"
+  commandLine "dotnet", "nuget", "push", "${mono.distEnv.output}/${mono.distEnv.build}/${project.name}.${project.version}.nupkg"
 }
 
 task __csharp__() {
