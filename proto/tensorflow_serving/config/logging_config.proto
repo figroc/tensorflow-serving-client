@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package tensorflow.serving;
+option go_package = "tensorflow_serving/config";
 
 import "tensorflow_serving/config/log_collector_config.proto";
 

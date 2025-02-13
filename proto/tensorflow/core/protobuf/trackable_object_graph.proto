@@ -5,7 +5,7 @@ package tensorflow;
 import "google/protobuf/wrappers.proto";
 
 option cc_enable_arenas = true;
-option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/protobuf";
+option go_package = "tensorflow/core/framework";
 
 // A TensorBundle addition which saves extra information about the objects which
 // own variables, allowing for more robust checkpoint loading into modified

@@ -77,10 +77,10 @@ task buildAll {
   dependsOn "cmake"
   dependsOn "wheel"
   // dependsOn "rust"
-  // dependsOn "java"
-  // dependsOn "node"
-  // dependsOn "mono"
-  // dependsOn "golang"
+  dependsOn "java"
+  dependsOn "node"
+  dependsOn "mono"
+  dependsOn "golang"
 }
 
 apply from: "gradle/ossrh.gradle"

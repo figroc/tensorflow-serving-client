@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package tensorflow;
 
-option go_package = "github.com/google/tsl/tsl/go/protobuf";
+option go_package = "tsl/protobuf";
 
 // RPC options for distributed runtime.
 message RPCOptions {

@@ -4,4 +4,4 @@ package tensorflow.dummy;
 
 import public "tsl/protobuf/rpc_options.proto";
 
-option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/protobuf";
+option go_package = "tensorflow/core/framework";

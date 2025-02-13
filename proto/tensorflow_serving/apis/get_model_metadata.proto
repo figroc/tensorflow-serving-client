@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package tensorflow.serving;
+option go_package = "tensorflow_serving/apis";
 option cc_enable_arenas = true;
 
 import "google/protobuf/any.proto";

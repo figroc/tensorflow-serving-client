@@ -25,10 +25,6 @@ task node {
     }
     exec {
       workingDir source
-      commandLine "npm", "build"
-    }
-    exec {
-      workingDir source
       commandLine "npm", "pack"
     }
   }
