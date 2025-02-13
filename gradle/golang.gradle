@@ -45,6 +45,7 @@ task generateProtoGo {
 }
 
 task golang {
+  dependsOn "generateProto"
   dependsOn "generateProtoGo"
   inputs.dir generateProtoGo.source
   outputs.dir generateProtoGo.source

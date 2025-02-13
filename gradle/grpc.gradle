@@ -49,7 +49,6 @@ protobuf {
         outputSubDir = "csharp"
       }
     }
-    all()["generateProto"].finalizedBy "finalizeProtoGrpc"
   }
 }
 
@@ -59,24 +58,4 @@ ext {
   protoGenMainDir = "${protobuf.generatedFilesBaseDir}/main"
   protoGenMainRel = file(projectDir).toPath().relativize(file(protoGenMainDir).toPath())
   protoGenMainSub = file(protoGenBaseDir).toPath().relativize(file(protoGenMainDir).toPath())
-}
-
-task finalizeProtoGrpc {
-  dependsOn "generateProto"
-  dependsOn "generateProtoGo"
-  inputs.dir protoGenMainDir
-  doLast {
-    delete {
-      delete fileTree("${protoGenMainDir}/cpp") {
-        include "**/*.grpc.pb.*"
-        exclude "**/*_service.grpc.pb.*"
-      }
-    }
-    delete {
-      delete fileTree("${protoGenMainDir}/python") {
-        include "**/*_pb2_grpc.py"
-        exclude "**/*_service_pb2_grpc.py"
-      }
-    }
-  }
 }
