@@ -8,6 +8,7 @@ option cc_enable_arenas = true;
 import "tensorflow/core/example/example.proto";
 
 package tensorflow.serving;
+option go_package = "tensorflow_serving/apis";
 
 // Specifies one or more fully independent input Examples.
 // See examples at:

@@ -6,6 +6,7 @@ import "tensorflow_serving/apis/get_model_status.proto";
 import "tensorflow_serving/apis/model_management.proto";
 
 package tensorflow.serving;
+option go_package = "tensorflow_serving/apis";
 
 // ModelService provides methods to query and update the state of the server,
 // e.g. which models/versions are being served.

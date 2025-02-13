@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package tensorflow;
 
-option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/protobuf";
+option go_package = "tensorflow/core/framework";
 
 // Represents a job type and the number of tasks under this job.
 // For example, ("worker", 20) implies that there will be 20 worker tasks.

@@ -56,7 +56,7 @@ task __python__ {
   doLast {
     copy {
       from wheel.distEnv.source
-      include "tensorflow/**", "tensorflow_serving/**"
+      include "tensorflow/**", "tensorflow_serving/**", "tsl/**"
       into src
     }
     exec {

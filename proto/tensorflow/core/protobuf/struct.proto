@@ -6,7 +6,7 @@ import "tensorflow/core/framework/tensor.proto";
 import "tensorflow/core/framework/tensor_shape.proto";
 import "tensorflow/core/framework/types.proto";
 
-option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/protobuf";
+option go_package = "tensorflow/core/framework";
 
 // `StructuredValue` represents a dynamically typed value representing various
 // data structures that are inspired by Python data structures typically used in

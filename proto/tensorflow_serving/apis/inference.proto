@@ -18,6 +18,7 @@ import "tensorflow_serving/apis/model.proto";
 import "tensorflow_serving/apis/regression.proto";
 
 package tensorflow.serving;
+option go_package = "tensorflow_serving/apis";
 
 // Inference request such as classification, regression, etc...
 message InferenceTask {

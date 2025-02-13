@@ -41,4 +41,4 @@ Invoke `./gradle.sh` instead of `gradle` to build artifacts using the docker.
 
 ## known issues
 
-* *Java, Node, Mono, Rust, Go* are excluded from `./gradle.sh buildAll`
+* *Rust* is excluded from `./gradle.sh buildAll`

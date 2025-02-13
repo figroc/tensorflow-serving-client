@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package tensorflow.serving;
+option go_package = "tensorflow_serving/apis";
 
 import "tensorflow_serving/apis/status.proto";
 import "tensorflow_serving/config/model_server_config.proto";
