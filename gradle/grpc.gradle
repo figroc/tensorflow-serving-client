@@ -63,6 +63,7 @@ ext {
 
 task finalizeProtoGrpc {
   dependsOn "generateProto"
+  dependsOn "generateProtoGo"
   inputs.dir protoGenMainDir
   doLast {
     delete {
